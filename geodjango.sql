@@ -5,7 +5,7 @@
 -- Dumped from database version 14.1
 -- Dumped by pg_dump version 14.1
 
--- Started on 2022-02-05 20:20:25
+-- Started on 2022-02-06 14:25:18
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -29,7 +29,7 @@ CREATE SCHEMA topology;
 ALTER SCHEMA topology OWNER TO postgres;
 
 --
--- TOC entry 5045 (class 0 OID 0)
+-- TOC entry 5024 (class 0 OID 0)
 -- Dependencies: 8
 -- Name: SCHEMA topology; Type: COMMENT; Schema: -; Owner: postgres
 --
@@ -46,7 +46,7 @@ CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
 
 
 --
--- TOC entry 5046 (class 0 OID 0)
+-- TOC entry 5025 (class 0 OID 0)
 -- Dependencies: 2
 -- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner: 
 --
@@ -63,7 +63,7 @@ CREATE EXTENSION IF NOT EXISTS postgis_raster WITH SCHEMA public;
 
 
 --
--- TOC entry 5047 (class 0 OID 0)
+-- TOC entry 5026 (class 0 OID 0)
 -- Dependencies: 3
 -- Name: EXTENSION postgis_raster; Type: COMMENT; Schema: -; Owner: 
 --
@@ -80,7 +80,7 @@ CREATE EXTENSION IF NOT EXISTS postgis_topology WITH SCHEMA topology;
 
 
 --
--- TOC entry 5048 (class 0 OID 0)
+-- TOC entry 5027 (class 0 OID 0)
 -- Dependencies: 4
 -- Name: EXTENSION postgis_topology; Type: COMMENT; Schema: -; Owner: 
 --
@@ -122,7 +122,7 @@ CREATE SEQUENCE public."TestTask_building_id_seq"
 ALTER TABLE public."TestTask_building_id_seq" OWNER TO geo;
 
 --
--- TOC entry 5049 (class 0 OID 0)
+-- TOC entry 5028 (class 0 OID 0)
 -- Dependencies: 236
 -- Name: TestTask_building_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: geo
 --
@@ -160,7 +160,7 @@ CREATE SEQUENCE public.auth_group_id_seq
 ALTER TABLE public.auth_group_id_seq OWNER TO geo;
 
 --
--- TOC entry 5050 (class 0 OID 0)
+-- TOC entry 5029 (class 0 OID 0)
 -- Dependencies: 242
 -- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: geo
 --
@@ -198,7 +198,7 @@ CREATE SEQUENCE public.auth_group_permissions_id_seq
 ALTER TABLE public.auth_group_permissions_id_seq OWNER TO geo;
 
 --
--- TOC entry 5051 (class 0 OID 0)
+-- TOC entry 5030 (class 0 OID 0)
 -- Dependencies: 244
 -- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: geo
 --
@@ -238,7 +238,7 @@ CREATE SEQUENCE public.auth_permission_id_seq
 ALTER TABLE public.auth_permission_id_seq OWNER TO geo;
 
 --
--- TOC entry 5052 (class 0 OID 0)
+-- TOC entry 5031 (class 0 OID 0)
 -- Dependencies: 240
 -- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: geo
 --
@@ -298,7 +298,7 @@ CREATE SEQUENCE public.auth_user_groups_id_seq
 ALTER TABLE public.auth_user_groups_id_seq OWNER TO geo;
 
 --
--- TOC entry 5053 (class 0 OID 0)
+-- TOC entry 5032 (class 0 OID 0)
 -- Dependencies: 248
 -- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: geo
 --
@@ -323,7 +323,7 @@ CREATE SEQUENCE public.auth_user_id_seq
 ALTER TABLE public.auth_user_id_seq OWNER TO geo;
 
 --
--- TOC entry 5054 (class 0 OID 0)
+-- TOC entry 5033 (class 0 OID 0)
 -- Dependencies: 246
 -- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: geo
 --
@@ -361,7 +361,7 @@ CREATE SEQUENCE public.auth_user_user_permissions_id_seq
 ALTER TABLE public.auth_user_user_permissions_id_seq OWNER TO geo;
 
 --
--- TOC entry 5055 (class 0 OID 0)
+-- TOC entry 5034 (class 0 OID 0)
 -- Dependencies: 250
 -- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: geo
 --
@@ -406,7 +406,7 @@ CREATE SEQUENCE public.django_admin_log_id_seq
 ALTER TABLE public.django_admin_log_id_seq OWNER TO geo;
 
 --
--- TOC entry 5056 (class 0 OID 0)
+-- TOC entry 5035 (class 0 OID 0)
 -- Dependencies: 252
 -- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: geo
 --
@@ -445,7 +445,7 @@ CREATE SEQUENCE public.django_content_type_id_seq
 ALTER TABLE public.django_content_type_id_seq OWNER TO geo;
 
 --
--- TOC entry 5057 (class 0 OID 0)
+-- TOC entry 5036 (class 0 OID 0)
 -- Dependencies: 238
 -- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: geo
 --
@@ -484,7 +484,7 @@ CREATE SEQUENCE public.django_migrations_id_seq
 ALTER TABLE public.django_migrations_id_seq OWNER TO geo;
 
 --
--- TOC entry 5058 (class 0 OID 0)
+-- TOC entry 5037 (class 0 OID 0)
 -- Dependencies: 234
 -- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: geo
 --
@@ -584,306 +584,6 @@ ALTER TABLE ONLY public.django_content_type ALTER COLUMN id SET DEFAULT nextval(
 --
 
 ALTER TABLE ONLY public.django_migrations ALTER COLUMN id SET DEFAULT nextval('public.django_migrations_id_seq'::regclass);
-
-
---
--- TOC entry 5022 (class 0 OID 18169)
--- Dependencies: 237
--- Data for Name: TestTask_building; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public."TestTask_building" (id, address, geom) FROM stdin;
-57	\N	0103000020E6100000010000000400000000000000000000000000000000000000000000000000F03F000000000000F03F0000000000000000000000000000F03F00000000000000000000000000000000
-58	\N	0103000020E6100000010000000400000000000000000000000000000000000000000000000000F03F000000000000F03F0000000000000000000000000000F03F00000000000000000000000000000000
-59	\N	0103000020E6100000010000000400000000000000000000000000000000000000000000000000F03F000000000000F03F0000000000000000000000000000F03F00000000000000000000000000000000
-60	\N	0103000020E6100000010000000400000000000000000000000000000000000000000000000000F03F000000000000F03F0000000000000000000000000000F03F00000000000000000000000000000000
-61	\N	0103000020E6100000010000000400000000000000000000400000000000000040000000000000084000000000000008400000000000000040000000000000084000000000000000400000000000000040
-62	\N	0103000020E6100000010000000400000000000000000010400000000000001040000000000000144000000000000014400000000000001040000000000000144000000000000010400000000000001040
-63	\N	0103000020E61000000100000004000000000000000000184000000000000018400000000000001C400000000000001C4000000000000018400000000000001C4000000000000018400000000000001840
-64	\N	0103000020E6100000010000000400000000000000000020400000000000002040000000000000224000000000000022400000000000002040000000000000224000000000000020400000000000002040
-65	\N	0103000020E6100000010000000400000000000000000024400000000000002440000000000000264000000000000026400000000000002440000000000000264000000000000024400000000000002440
-66	\N	0103000020E61000000100000004000000000000000000284000000000000028400000000000002A400000000000002A4000000000000028400000000000002A4000000000000028400000000000002840
-67	\N	0103000020E610000001000000040000000000000000002C400000000000002C400000000000002E400000000000002E400000000000002C400000000000002E400000000000002C400000000000002C40
-68	\N	0103000020E6100000010000000400000000000000000030400000000000003040000000000000314000000000000031400000000000003040000000000000314000000000000030400000000000003040
-69	\N	0103000020E6100000010000000400000000000000000032400000000000003240000000000000334000000000000033400000000000003240000000000000334000000000000032400000000000003240
-\.
-
-
---
--- TOC entry 5028 (class 0 OID 18195)
--- Dependencies: 243
--- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public.auth_group (id, name) FROM stdin;
-\.
-
-
---
--- TOC entry 5030 (class 0 OID 18204)
--- Dependencies: 245
--- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public.auth_group_permissions (id, group_id, permission_id) FROM stdin;
-\.
-
-
---
--- TOC entry 5026 (class 0 OID 18188)
--- Dependencies: 241
--- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
-1	Can add log entry	1	add_logentry
-2	Can change log entry	1	change_logentry
-3	Can delete log entry	1	delete_logentry
-4	Can view log entry	1	view_logentry
-5	Can add permission	2	add_permission
-6	Can change permission	2	change_permission
-7	Can delete permission	2	delete_permission
-8	Can view permission	2	view_permission
-9	Can add group	3	add_group
-10	Can change group	3	change_group
-11	Can delete group	3	delete_group
-12	Can view group	3	view_group
-13	Can add user	4	add_user
-14	Can change user	4	change_user
-15	Can delete user	4	delete_user
-16	Can view user	4	view_user
-17	Can add content type	5	add_contenttype
-18	Can change content type	5	change_contenttype
-19	Can delete content type	5	delete_contenttype
-20	Can view content type	5	view_contenttype
-21	Can add session	6	add_session
-22	Can change session	6	change_session
-23	Can delete session	6	delete_session
-24	Can view session	6	view_session
-25	Can add building	7	add_building
-26	Can change building	7	change_building
-27	Can delete building	7	delete_building
-28	Can view building	7	view_building
-\.
-
-
---
--- TOC entry 5032 (class 0 OID 18211)
--- Dependencies: 247
--- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
-1	pbkdf2_sha256$320000$ufJXJoebX7qOVQyqiVKhLa$3g+LZI4nc7C/BfpqqmVl6vV5yzJse5/sIWXbIXBn/r4=	2022-02-04 17:18:36.137425+03	t	super			super@mail.ru	t	t	2022-02-02 16:56:19.535185+03
-\.
-
-
---
--- TOC entry 5034 (class 0 OID 18220)
--- Dependencies: 249
--- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public.auth_user_groups (id, user_id, group_id) FROM stdin;
-\.
-
-
---
--- TOC entry 5036 (class 0 OID 18227)
--- Dependencies: 251
--- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public.auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
-\.
-
-
---
--- TOC entry 5038 (class 0 OID 18286)
--- Dependencies: 253
--- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public.django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
-\.
-
-
---
--- TOC entry 5024 (class 0 OID 18179)
--- Dependencies: 239
--- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public.django_content_type (id, app_label, model) FROM stdin;
-1	admin	logentry
-2	auth	permission
-3	auth	group
-4	auth	user
-5	contenttypes	contenttype
-6	sessions	session
-7	TestTask	building
-\.
-
-
---
--- TOC entry 5020 (class 0 OID 18160)
--- Dependencies: 235
--- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public.django_migrations (id, app, name, applied) FROM stdin;
-1	TestTask	0001_initial	2022-02-02 16:55:23.404344+03
-2	contenttypes	0001_initial	2022-02-02 16:55:23.513799+03
-3	auth	0001_initial	2022-02-02 16:55:24.487227+03
-4	admin	0001_initial	2022-02-02 16:55:24.6719+03
-5	admin	0002_logentry_remove_auto_add	2022-02-02 16:55:24.679903+03
-6	admin	0003_logentry_add_action_flag_choices	2022-02-02 16:55:24.690009+03
-7	contenttypes	0002_remove_content_type_name	2022-02-02 16:55:24.759312+03
-8	auth	0002_alter_permission_name_max_length	2022-02-02 16:55:24.767426+03
-9	auth	0003_alter_user_email_max_length	2022-02-02 16:55:24.774425+03
-10	auth	0004_alter_user_username_opts	2022-02-02 16:55:24.78153+03
-11	auth	0005_alter_user_last_login_null	2022-02-02 16:55:24.788641+03
-12	auth	0006_require_contenttypes_0002	2022-02-02 16:55:24.791078+03
-13	auth	0007_alter_validators_add_error_messages	2022-02-02 16:55:24.798718+03
-14	auth	0008_alter_user_username_max_length	2022-02-02 16:55:24.997014+03
-15	auth	0009_alter_user_last_name_max_length	2022-02-02 16:55:25.004876+03
-16	auth	0010_alter_group_name_max_length	2022-02-02 16:55:25.012904+03
-17	auth	0011_update_proxy_permissions	2022-02-02 16:55:25.020914+03
-18	auth	0012_alter_user_first_name_max_length	2022-02-02 16:55:25.028025+03
-19	sessions	0001_initial	2022-02-02 16:55:25.223382+03
-20	TestTask	0002_alter_building_geom	2022-02-02 19:18:46.356029+03
-\.
-
-
---
--- TOC entry 5039 (class 0 OID 18315)
--- Dependencies: 254
--- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: geo
---
-
-COPY public.django_session (session_key, session_data, expire_date) FROM stdin;
-tzr6rw1ampqtbvfj1uwdq9bn2v6njc60	.eJxVjEEOwiAQRe_C2hBgKKBL9z0DmRlAqoYmpV0Z765NutDtf-_9l4i4rTVuPS9xSuIitDj9boT8yG0H6Y7tNkue27pMJHdFHrTLcU75eT3cv4OKvX5rIF1U8j6T8TYhInBQCv3ZEHgzWOecIsVsbWAAa9AD2hJc1iUEdoN4fwDblDdl:1nFzQ4:RXfAmTReVlZFtRxLw8eejmwdsOvd93VE8NvzYyr2wiI	2022-02-18 17:18:36.232725+03
-\.
-
-
---
--- TOC entry 4786 (class 0 OID 16705)
--- Dependencies: 214
--- Data for Name: spatial_ref_sys; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-COPY public.spatial_ref_sys (srid, auth_name, auth_srid, srtext, proj4text) FROM stdin;
-\.
-
-
---
--- TOC entry 4787 (class 0 OID 17993)
--- Dependencies: 229
--- Data for Name: topology; Type: TABLE DATA; Schema: topology; Owner: postgres
---
-
-COPY topology.topology (id, name, srid, "precision", hasz) FROM stdin;
-\.
-
-
---
--- TOC entry 4788 (class 0 OID 18005)
--- Dependencies: 230
--- Data for Name: layer; Type: TABLE DATA; Schema: topology; Owner: postgres
---
-
-COPY topology.layer (topology_id, layer_id, schema_name, table_name, feature_column, feature_type, level, child_id) FROM stdin;
-\.
-
-
---
--- TOC entry 5059 (class 0 OID 0)
--- Dependencies: 236
--- Name: TestTask_building_id_seq; Type: SEQUENCE SET; Schema: public; Owner: geo
---
-
-SELECT pg_catalog.setval('public."TestTask_building_id_seq"', 69, true);
-
-
---
--- TOC entry 5060 (class 0 OID 0)
--- Dependencies: 242
--- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: geo
---
-
-SELECT pg_catalog.setval('public.auth_group_id_seq', 1, false);
-
-
---
--- TOC entry 5061 (class 0 OID 0)
--- Dependencies: 244
--- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: geo
---
-
-SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
-
-
---
--- TOC entry 5062 (class 0 OID 0)
--- Dependencies: 240
--- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: geo
---
-
-SELECT pg_catalog.setval('public.auth_permission_id_seq', 28, true);
-
-
---
--- TOC entry 5063 (class 0 OID 0)
--- Dependencies: 248
--- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: geo
---
-
-SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
-
-
---
--- TOC entry 5064 (class 0 OID 0)
--- Dependencies: 246
--- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: geo
---
-
-SELECT pg_catalog.setval('public.auth_user_id_seq', 1, true);
-
-
---
--- TOC entry 5065 (class 0 OID 0)
--- Dependencies: 250
--- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: geo
---
-
-SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
-
-
---
--- TOC entry 5066 (class 0 OID 0)
--- Dependencies: 252
--- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: geo
---
-
-SELECT pg_catalog.setval('public.django_admin_log_id_seq', 1, false);
-
-
---
--- TOC entry 5067 (class 0 OID 0)
--- Dependencies: 238
--- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: geo
---
-
-SELECT pg_catalog.setval('public.django_content_type_id_seq', 7, true);
-
-
---
--- TOC entry 5068 (class 0 OID 0)
--- Dependencies: 234
--- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: geo
---
-
-SELECT pg_catalog.setval('public.django_migrations_id_seq', 20, true);
 
 
 --
@@ -1241,7 +941,7 @@ ALTER TABLE ONLY public.django_admin_log
     ADD CONSTRAINT django_admin_log_user_id_c564eba6_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
 
 
--- Completed on 2022-02-05 20:20:26
+-- Completed on 2022-02-06 14:25:19
 
 --
 -- PostgreSQL database dump complete
