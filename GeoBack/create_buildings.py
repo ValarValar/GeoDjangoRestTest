@@ -14,8 +14,8 @@ for i in range (10):
     p = Polygon(((x, x), (y, y), (x, y), (x, x)), srid=4326)
     d["geom"]["type"] = p.geom_type
     d["geom"]["coordinates"] = p.coords
-    #res = requests.post(API_URL + '', json=d)
-    #assert res.status_code == 201
+    res = requests.post(API_URL + '', json=d)
+    assert res.status_code == 201
     x += 2
     y += 2
 
